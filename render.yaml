@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: slugbound
+    runtime: static
+    buildCommand: bash build.sh render
+    staticPublishPath: ./web
+    headers:
+      - path: /engine/*
+        name: Cache-Control
+        value: no-cache
+      - path: /js/*
+        name: Cache-Control
+        value: no-cache

@@ -1,0 +1,9 @@
+{
+  "buildCommand": "bash build.sh vercel",
+  "installCommand": "echo skip",
+  "outputDirectory": "web",
+  "headers": [
+    { "source": "/engine/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] },
+    { "source": "/js/(.*)",     "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+  ]
+}
